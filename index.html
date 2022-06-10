@@ -2,74 +2,209 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Lamb's Blog (Prototype)</title>
-    </head>
-    <body>
-    <style>
+        <title>APCSP FFP</title>
+        <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
         body{
-            font-family: serif;
-            width:70%;
+            background-color:#042a3b;
+            font-size: 16px;
+            line-height:1.5;
+            color: white;
         }
-        #header{
-            color:rgb(255, 255, 255);
-            background-color:rgb(219, 131, 219);
-            font-weight: bold;
-            font-size:24px;
-            width: 70%;
-        }
-        h2{
-            font-size:28px;
-        }
-        #ToC{
-            position: fixed;
-            margin-left:70%;
-            width:30%;
+        .branch-bar{
+            z-index: 10;
+            position:fixed;
+            float:left;
+            width:200px;
             height:100%;
-            background-color: rgb(255, 217, 255);
-            
+            background-color: #04161f;
         }
-        #ToCTitle{
-            font-style:italic;
-            font-family:sans-serif;
-            background-color: rgb(219, 131, 219);
+        .header{
+            background-color:#021d29;
+            font-size:40px;
+            padding: 10px;
+            margin-left:200px;
         }
-        .post{
-            color:rgb(150, 69, 150);
-            text-decoration:underline;
-            font-style:italic;
-            line-height: 0.5em;
+        #bb-title{
+            font-size:36px;
+            padding:10px;
+            text-decoration: underline;
+            font-style: italic;
             text-align:center;
         }
-        h6{
-            line-height: 0;
-            text-align:right;
+        .bb-icons{
+            text-align: center;
+            line-height:100px;
         }
-        p{
-            line-height:1.5em;
+        #content-header{
+            z-index:2;
+            position:absolute;
+            left: 200px;
+            font-size:60px;
+            border-bottom:3px solid #cc4608;
+            width:1620px;
+            margin: 30px;
         }
-    
+        .sidebar{
+            text-indent:0px;
+            float:right;
+            clear:right;
+            width:300px;
+            border: 3px outset #cc4608;
+            margin: 0px 0px 20px 25px;
+            text-align:center;
+            background-color:#062330;
+        }
+        .sidebar .title{
+            background-color:#021d29;
+            font-weight: bold;
+            margin: 5px;
+            padding:3px;
+            color: #ed5d1a;
+        }
+        .sb-list{
+            text-align: left;
+            margin-left:120px;
+        }
+        .sb-title{
+            
+        }
+        .content-column{
+            text-indent:30px;
+            margin: 150px 0px 0px 230px;
+            width:1620px;
+            padding: 5px 50px;
+        }
+        h1{
+            font-style:italic;
+            text-indent:0px;
+            margin-top: 40px;
+            margin-bottom:20px;
+            border-bottom:2px solid #cc4608;
+            width:75rem;
+        }
+        #cc-summary{
+            margin-top: 20px;
+        }
+        h2{
+            text-indent: 0px;
+            margin-top: 20px;
+            color:#ed5d1a;
+        }
+        #cc-pic1{
+            background-color:#021d29;
+            text-indent:0px;
+            text-align:center;
+            border: 3px outset #cc4608;
+            float:left;
+            clear:left;
+            margin: 30px 20px 0px 0px;
+            padding-bottom:5px;
+        }
+        table{
+            margin-left:5rem;
+            padding:5px 10px;
+        }
+        td{
+            padding:3px;
+        }
+        .table-of-contents{
+            text-indent:0px;
+            margin: 20px;
+            padding:0.5rem 0rem 1rem 0rem;
+            border: 3px solid #ed5d1a;
+            width: 10rem;
+        }
+        .table-of-contents .title{
+            font-size: 30px;
+            text-align:center;
+            text-decoration: underline 2px #ed5d1a;
+        }
+        .list a{
+            text-align:left;
+            color:white;
+        }
+        .list{
+            margin-left:3rem;
+        }
     </style>
-<!-- Header -->
-        
-        <div id="header"><h1>Lamb's blog</h1></div>
-        
-<!-- Table of Contents -->
-        <div id="ToC">
-        <h2 id="ToCTitle">Contents</h2>
-        <ul>
-            <li><a href="#p1">Blossoms Festival</a></li>
-            <li><a href="#p2">Peace or Ceasefire?</a></li>
-        </ul>
+    </head>
+    <body>
+        <div class="branch-bar">
+            <p id="bb-title">Explore</p>
+            <div class="bb-icons">
+                <a class="bb-icon" target="_blank" href="https://instagram.com/the_lamb_notsalmon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"  height="40"></a><br>
+                <a class="bb-icon" target="_blank" href="https://www.youtube.com/watch?v=rhgwIhB58PA"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png"  height="40"></a><br>
+                <a class="bb-icon" target="_blank" href="https://discord.gg/kcj5A8j"><img src="https://www.freepnglogos.com/uploads/discord-logo-png/concours-discord-cartes-voeux-fortnite-france-6.png" height="40"></a>
+            </div>
+        </div>
+        <div class="header">
+            <p><em>Eve'n Magnolia</em> Wiki</p>
+        </div>
+            <p id="content-header">Aqueia</p>
+        <div class="content-column">
+            <div class="sidebar">
+                <img id="sb-pic"src="https://magicalskyiceland.com/wp-content/uploads/2016/12/vestrahorn_speglun_laga-liti-3878_72dpi.jpg" width="294">
+                <p id="sb-caption"><em>Pic of Iceland, Not Aqueia</em></p>
+                <p class="title sb-gov">Government Type</p>
+                <p class="sb-gov" >Divine Tyranny</p>
+                <p class="title sb-ruler" >Ruler(s)<p>
+                <p class="sb-ruler" >Hydros</p>
+                <p class="title sb-geo"> Geographical Features</p>
+                <div class=" sb-geo sb-list">
+                <ul>
+                    <li>Mountains
+                    <li>Terraces
+                    <li>Beaches
+                    <li>Archipelago
+                </ul>
+                </div>
+                <p class="title sb-relations" id="sb-relations-title">Relations</p>
+                <div class="sb-relations">
+                <table>
+                    <tr>
+                        <td>Igneia</td>
+                        <td>Neutral</td>
+                    </tr>
+                    <tr>
+                        <td>Terrania
+                        <td>Neutral
+                    </tr>
+                    <tr>
+                        <td>Ventyria
+                        <td>Allied
+                    </tr>
+                </table>
+                </div>
+            </div>
+            <h1 id="cc-summary">Summary</h1>
+            <p class="cc-undertitle">blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+            
+            <div class="table-of-contents">
+                <p class="title">Contents<p>
+                <ul class="list">
+                    <a href="#geo-title"><li>Geography</a>
+                    <a href="#hist-title"><li>History</a>
+                </ul>
+            </div>
+            
+            <h1 id="geo-title">Geography</h1>
+            <p class="cc-undertitle">blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+            <h1 id="hist-title">History</h1>
+            <div id="cc-pic1">
+                <img id="cc-pic1-pic"src="https://cdn.discordapp.com/attachments/495687997996531733/983982571811647548/unknown.png" width="300">
+                <p id="cc-pic1-caption">Heimerdinger's Memory from <em>Arcane</em></p>
+            </div>
+            <h2>Manifestation</h2>
+            <p >blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+            <h2>The Great War</h2>
+            <p >blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
         </div>
         
-<!-- 1st Post -->        
-    <h2 id="p1" class="post">Blossoms Festival</h2>
-    <h6>Florence, Terrania (XXX A.G.)</h6>
-    <p>The Blossoms Festival has just concluded but bless, do I have a lot to share. For the uninitiated, the Blossoms Festival is an annual festival in Terrania that celebrates the coming of the new year. During it's 5-day span, many artists and craftsman show off their work from the previous year and food stands pop up in ubiquity in the capital city of Fluorest. The Blossoms Festival as its named after, lines up with the blooming of the cherry blossoms that are planted around the city. Those who wish to see their true beauty should make the voyage to Terrania to see it.</p>
-        
-<!-- 2nd Post -->
-    <h2 id="p2" class="post">Peace or Ceasefire? </h2>
-    <h6>Magnolia (XXXX)</h6>
-    <p>The world is in a hectic and volatile state. However, beyond the muddling darkness there is a shimmer of light. The Great War seems to come to a close after Geona's split from the main continent. The many Geic lives sacrificed to effectively isolate the nation seems to have put the world on ice, which ironic considering how many lives have already been lost in the war. Attacks and raids seemed to have slowed down worldwide and people are starting to question whethor or not we've finally reached a resolution. We have already reached a truce with Ventyria and peace between the three warring nations left seems imminent. Only time will tell, but let us pray for the end of this dreadful Great War.
+
     </body>
 </html>
